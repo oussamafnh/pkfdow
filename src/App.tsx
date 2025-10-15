@@ -4,7 +4,7 @@ import bgMobile from './assets/mobilebg.png';
 import pkfIcon from './assets/icon.png';
 import androidIcon from './assets/android.svg';
 import iosIcon from './assets/ios.svg';
-import apkFile from './assets/PKFmaroc.apk';
+// import apkFile from '/PKFmaroc.apk';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,12 +20,14 @@ function App() {
     return () => window.removeEventListener('resize', checkScreen);
   }, []);
 
+  // const handleDownload = () => {
+  //   const link = document.createElement('a');
+  //   link.href = apkFile;
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = apkFile;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.location.href = '/PKFmaroc.apk';
   };
   
   
